@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Recipe Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Generate Your Recipe</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes List</a>
+      <a href="generate.html">Generate Curry</a>
+      <a href="wishlist.html">Wishlist</a>
+    </nav>
+  </header>
+
+  <h1>Recipe Generator</h1>
+  <label for="recipeInput">Choose a recipe:</label>
+  <select id="recipeInput">
+    <option value="">--Select a recipe--</option>
+    <option value="egg friedrice">Egg Friedrice</option>
+    <option value="soya pakoda">Soya Pakoda</option>
+    <option value="chicken curry">Chicken Curry</option>
+    <option value="maggie">Maggie</option>
+    <option value="tomato dal">Tomato Dal</option>
+    <option value="cappucino coffee">Cappucino Coffee</option>
+    <option value="pulihora">Pulihora</option>
+    <option value="sambar">Sambar</option>
+    <option value="potato fry">Potato Fry</option>
+    
+  </select>
+
+  <button onclick="getRecipe()">Generate Recipe</button>
+
+  <div id="results"></div>
+
+  <h2>My Wishlist</h2>
+  <ul id="wishlistItems"></ul>
+  
+  </main>
+  <footer>
+    <p>&copy; 2025 Bachelor Recipe Hub</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
