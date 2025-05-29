@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: lightpink;
+    }
+
+    h1, h4, label {
+      text-align: center;
+    }
+
+    select {
+      font-size: 16px;
+      padding: 5px;
+      margin: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #productContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    #productContainer > div {
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      min-width: 150px;
+      text-align: center;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Products List</h1>
+  </center>
+
+  <h4><b><label for="categoryFilter">Category:</label></b></h4>
+  <select id="categoryFilter">
+    <option value="all">All</option>
+    <option value="electronics">Electronics</option>
+    <option value="stationery">Stationery</option>
+  </select>
+
+  <h4><b><label for="sortPrice">Sort by Price:</label></b></h4>
+  <select id="sortPrice">
+    <option value="asc">Low to High</option>
+    <option value="desc">High to Low</option>
+  </select>
+
+  <div id="productContainer"></div>
+
+  <script>
+    const products = [
+      { name: "Laptop", category: "electronics", price: 75000 },
+      { name: "Phone", category: "electronics", price: 8000 },
+      { name: "Earphones", category: "electronics", price: 1500 },
+      { name: "Bluetooth", category: "electronics", price: 2000 },
+      { name: "Charger", category: "electronics", price: 450 },
+      { name: "Cable", category: "electronics", price: 1000 },
+      { name: "Tab", category: "electronics", price: 25000 },
+      { name: "Headphones", category: "electronics", price: 15000 },
+      { name: "Book", category: "stationery", price: 40 },
+      { name: "Pen", category: "stationery", price: 10 },
+      { name: "Pencil", category: "stationery", price: 30 },
+      { name: "Dairy", category: "stationery", price: 100 },
+      { name: "Eraser", category: "stationery", price: 5 },
+      { name: "Pouch", category: "stationery", price: 50 },
+      { name: "Plank", category: "stationery", price: 150 }
+    ];
+
+    function displayProducts(items) {
+      const container = document.getElementById("productContainer");
+      container.innerHTML = "";
+      items.forEach(product => {
+        const div = document.createElement("div");
+        div.textContent = `${product.name} - ₹${product.price}`;
+        container.appendChild(div);
+      });
+    }
+
+    function applyFilters() {
+      const category = document.getElementById("categoryFilter").value;
+      const sort = document.getElementById("sortPrice").value;
+      let filtered = products.filter(p => category === "all" || p.category === category);
+
+      if (sort === "asc") {
+        filtered.sort((a, b) => a.price - b.price);
+      } else {
+        filtered.sort((a, b) => b.price - a.price);
+      }
+
+      displayProducts(filtered);
+    }
+
+    document.getElementById("categoryFilter").addEventListener("change", applyFilters);
+    document.getElementById("sortPrice").addEventListener("change", applyFilters);
+
+    // Initial load with filters applied
+    window.onload = applyFilters;
+  </script>
+</body>
+</html>

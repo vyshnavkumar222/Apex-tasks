@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header, section {
+      padding: 20px;
+      color: white;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 20px;
+    }
+
+    .scroll-left {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      background: rgba(255,255,255,0.7);
+      color: black;
+    }
+
+    .scroll-left h1 {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 10s linear infinite;
+      font-size: 32px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    section {
+      min-height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .about {
+      background-image: url("aboutbg.jpg");
+    }
+
+    .projects {
+      background-image: url("probackground.jfif");
+    }
+
+    .contact {
+      background-image: url("contactbg.jfif");
+      color: black;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-left">
+    <h1>Welcome to My Portfolio</h1>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" style="background-image: url('homebg.jpg');">
+    <h1 style=:color: black;"><b>Welcome to My Portfolio</h1></b>
+    <p style="text-align:center; font-size: 30px;">Explore my work, skills, and contact details.
+Discover a variety of web development projects that highlight creativity and technical expertise.
+From personal portfolios to interactive applications, each project reflects a unique problem-solving approach.
+Browse through detailed descriptions to understand the goals and technologies behind each project.
+Learn more about the skills I bring to the table — from front-end design to responsive layouts.
+If you have questions or collaboration ideas, feel free to reach out through the contact section.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h1 style="color: red;">About this website</h1>
+    <h2 style="color: yellow;">This project is about</h2>
+    <h3 style="color: blue;">Build a Personal Portfolio Website</h3>
+    <img src="C:\VYSHNAV TASK-4\portfolio.jfif.jpg" width="250" height="250">
+    <h4>
+      Design and develop a professional portfolio website to highlight your skills, experience, and completed projects. Include essential sections like About, Projects, and Contact to present a clear and organized profile. Ensure the website is fully responsive for all devices and has a clean, modern layout.
+    </h4>
+
+    <h3 style="color: blue;">Create a To-Do List or Note-Taking App</h3>
+    <img src="C:\VYSHNAV TASK-4\task.jfif.jpg"width="250" height="250">
+    <h4>
+      A simple app that allows users to add, edit, and delete tasks or notes easily. Data is saved using localStorage so it persists even after browser closure. A great way to demonstrate your dynamic web development skills.
+    </h4>
+
+    <h3 style="color: blue;">Develop a Product Listing Page</h3>
+    <img src="C:\VYSHNAV TASK-4\stat.jfif.jpg"width="250" height="250">
+    <h4>
+      This page lets users browse products and filter by categories, price range, or availability. Sorting options (e.g. price, rating) are included to enhance UX. A strong example of building dynamic data-driven UIs.
+    </h4>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h1 style="color: blue;">My Projects</h1>
+
+    <h3 style="color: green;">🔧 Project 1: Personal Portfolio Website</h3>
+    <p><h4 style="color: black;">
+      Objective: Showcase your skills and projects in a professional, multi-page website.<br>
+      Actions: Design and build a responsive portfolio that includes "About", "Projects", and "Contact" sections.
+    </p></h4>
+
+    <h3 style="color: green;">📝 Project 2: To-Do List or Note-Taking App</h3>
+    <p><h4 style="color: black;">
+      Objective: Implement data persistence using local storage.<br>
+      Actions: Enhance the app to save and retrieve tasks locally.
+    </p></h4>
+
+    <h3 style="color: green;">🛍 Project 3: Product Listing Page</h3>
+    <p><h4 style="color: black;">
+      Objective: Create an interactive interface for filtering and sorting.<br>
+      Actions: Implement UI that allows filtering items by category/price, and sorting by rating/popularity.
+    </p></h4>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h1>Contact Us</h1>
+    <h2>
+      If you have any queries, please contact us through:<br><br>
+      Name: Naga Vinay<br>
+      Email: nagavinayyarramsetti1@mail.com<br>
+      Phone: +91 08813-12345<br>
+      Address: 123, ABC Street, Hyderabad, Telangana, India - 500001<br>
+      LinkedIn: <a href="https://www.linkedin.com/in/yarramsetti-naga-vinay-39b13a363" target="_blank">https://www.linkedin.com/in/vyshnavkumar-39b13a363</a><br>
+      GitHub: <a href="https://github.com/vyshnav-2004-bit" target="_blank">https://github.com/vyshnav-2004-bit
+
+    </h2>
+  </section>
+
+</body>
+</html>
